@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<title>JQuery</title>
+	<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$("document").ready(function() {
+
+	$("body").append('<h1>World!</h1>');
+	$("p").css("border", "5px dotted orange");
+	$("p:first").css("text-align", "right");
+
+	$("#intro").css("border", "5px solid green");
+	$("#intro").text("<h3>prova</h3>");
+	$("#intro").prepend("<h4>prova2</h4>");
+	$("#intro").on("click", onMouseClick);
+	$("#example p").css("background-color", "red").fadeOut(3000);
+
+	//$("h2:not(.selectors)").css("background-color", "green");
+	$("h2:not(.selectors)").slideDown(2000);
+
+
+	function onMouseClick(e){
+		$("p").toggle(200);
+		// $("#intro").append('<br/>tipo evento: ' + e.type);
+		// $("#intro").append('<br/>pos y: ' + e.pageY);
+		// $("#intro").append('<br/>pos y: ' + e.pageX);
+		// $("#intro").append('<br/>button: ' + e.which);
+		$("#example").show(300).load("aggiungi.html");
+
+	}
+
+
+	
+});
+
+
+
+</script>
+</head>
+<body>
+<h1>Hello</h1>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+
+	<div id="example">
+	ccddddddddddddddddsaafadfsafsafsafsaf
+		
+	</div>
+
+	<h1 id="intro">Lorem ipsum dolor sit amet</h1>
+	<h2 class="selectors">Lorem ipsum dolor sit amet</h2>
+	<h2 class="selectors">Lorem ipsum dolor sit amet</h2>
+	<p>Lorem ipsum dolor sit amet</p>
+	<p>Lorem ipsum dolor sit amet<code>$("p")</code> wLorem ipsum dolor sit amet</p>
+	<h2 class="filters">Lorem ipsum dolor sit amet</h2>
+	<p>Lorem ipsum dolor sit amet</p>
+    <p>Lorem ipsum dolor sit amet, <code>$("p:first")</code> Lorem ipsum dolor sit amet <code>$("p")</code>.</p>
+
+</body>
+</html>
+
+

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="number" id="addendo1" value="0" /> 
+	<input type="number" id="addendo2" value="0" /> 
+	<button onclick="somma()">somma</button>
+
+
+<script type="text/javascript">
+
+	function somma(){
+
+		var addendo1 = document.getElementById("addendo1");
+		var addendo2 = document.getElementById("addendo2");
+
+		var somma = parseInt( addendo1.value ) + parseInt( addendo2.value );
+
+		alert(somma); 
+
+	}
+
+
+</script>
+
+
+</body>
+</html>
